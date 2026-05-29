@@ -179,7 +179,7 @@ function UserDashboard() {
     try {
 
       const res = await fetch(
-        "http://127.0.0.1:5000/api/upload-cv",
+        "https://ai-career-counseler-agent.onrender.com/api/upload-cv",
         {
           method: "POST",
           body: formData,
