@@ -6,7 +6,7 @@ from docx import Document
 
 cv_bp = Blueprint("cv", __name__)
 
-UPLOAD_FOLDER = "backend/uploads"
+UPLOAD_FOLDER = "uploads"
 
 # CREATE FOLDER IF NOT EXISTS
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
