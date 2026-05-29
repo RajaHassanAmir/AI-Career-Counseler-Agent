@@ -7,7 +7,7 @@ import {
 
 import Navbar from "../components/navbar";
 
-import ChatPage from "../pages/user/chatPage";
+import ChatPage from "../pages/user/chatpage";
 
 import LandingPage from "../pages/publics/LandingPage";
 
