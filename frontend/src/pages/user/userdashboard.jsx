@@ -9,7 +9,7 @@ import {
   onValue
 } from "firebase/database";
 
-import { useAuth } from "../../context/AuthContext";
+import { useAuth } from "../../Context/AuthContext";
 
 import { signOut } from "firebase/auth";
 
