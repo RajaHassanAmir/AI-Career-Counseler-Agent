@@ -90,7 +90,7 @@ function ChatPage() {
     try {
 
       const response = await fetch(
-        "https://ai-career-counseler-agent.onrender.com/api/upload-cv",
+        "https://ai-career-counseler-agent.onrender.com/api/chat",
         {
           method: "POST",
           headers: {
