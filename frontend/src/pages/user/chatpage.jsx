@@ -16,12 +16,7 @@ function ChatPage() {
 
   const messagesEndRef = useRef(null);
 
-  const [messages, setMessages] = useState([
-    {
-      role: "ai",
-      text: "👋 Welcome to CareerAI Assistant. Ask me anything about careers, jobs, skills, AI, internships, or future opportunities.",
-    },
-  ]);
+  const [messages, setMessages] = useState([]);
 
   const [input, setInput] = useState("");
 
@@ -39,31 +34,39 @@ function ChatPage() {
   // 🔥 LOAD CHAT HISTORY
   useEffect(() => {
 
-    if (!user) return;
+  if (!user) return;
 
-    const chatRef = ref(db, `chatHistory/${user.uid}`);
+  const chatRef = ref(db, `chatHistory/${user.uid}`);
 
-    const unsubscribe = onValue(chatRef, (snapshot) => {
+  const unsubscribe = onValue(chatRef, (snapshot) => {
 
-      const data = snapshot.val();
+    const data = snapshot.val();
 
-      if (data) {
+    if (data) {
 
-        const loadedMessages = Object.keys(data).map((key) => ({
-          id: key,
-          ...data[key],
-        }));
+      const loadedMessages = Object.keys(data).map((key) => ({
+        id: key,
+        ...data[key],
+      }));
 
-        setMessages(loadedMessages);
+      setMessages(loadedMessages);
 
-      }
+    } else {
 
-    });
+      setMessages([
+        {
+          role: "ai",
+          text: "👋 Welcome to CareerAI Assistant. Ask me anything about careers, jobs, skills, AI, internships, or future opportunities.",
+        },
+      ]);
 
-    return () => unsubscribe();
+    }
 
-  }, [user]);
+  });
 
+  return () => unsubscribe();
+
+}, [user]);
   // 🚀 SEND MESSAGE
   const sendMessage = async () => {
 
