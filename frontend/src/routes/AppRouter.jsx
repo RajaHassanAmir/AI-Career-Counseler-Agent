@@ -7,13 +7,13 @@ import {
 
 import Navbar from "../components/navbar";
 
-import ChatPage from "../pages/user/ChatPage";
+import ChatPage from "../pages/user/chatPage";
 
 import LandingPage from "../pages/publics/LandingPage";
 
-import Auth from "../pages/Auth";
+import Auth from "../pages/auth";
 
-import UserDashboard from "../pages/user/UserDashboard";
+import UserDashboard from "../pages/user/userdashboard";
 
 import ClientDashboard from "../pages/client/ClientDashboard";
 
