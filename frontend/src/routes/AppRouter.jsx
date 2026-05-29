@@ -5,7 +5,7 @@ import {
   Navigate
 } from "react-router-dom";
 
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 
 import ChatPage from "../pages/user/ChatPage";
 
