@@ -8,7 +8,7 @@ import {
 
 import { db } from "../../firebase";
 
-import { useAuth } from "../../context/AuthContext";
+import { useAuth } from "../../Context/AuthContext";
 
 function ChatPage() {
 
