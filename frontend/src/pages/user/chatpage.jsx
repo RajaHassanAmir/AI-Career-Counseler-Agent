@@ -82,8 +82,6 @@ function ChatPage() {
     // SAVE USER MESSAGE
     await push(chatRef, userMsg);
 
-    setMessages((prev) => [...prev, userMsg]);
-
     const currentInput = input;
 
     setInput("");
@@ -114,8 +112,6 @@ function ChatPage() {
 
       await push(chatRef, aiMsg);
 
-      setMessages((prev) => [...prev, aiMsg]);
-
     } catch (error) {
 
       const errorMsg = {
@@ -125,7 +121,6 @@ function ChatPage() {
 
       await push(chatRef, errorMsg);
 
-      setMessages((prev) => [...prev, errorMsg]);
     }
 
     setLoading(false);
