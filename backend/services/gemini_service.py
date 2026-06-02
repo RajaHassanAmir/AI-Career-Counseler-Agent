@@ -1,7 +1,7 @@
 from groq import Groq
 
 client = Groq(
-    api_key="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"
+    api_key="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"
 )
 
 def get_ai_response(user_message):
